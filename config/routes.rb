@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   namespace :api do
     get "/fortune_path" => "my_examples#fortune_action"
   end
+
+  namespace :api do
+    get "/lottery_path" => "my_examples#lottery_action"
+  end
 end
