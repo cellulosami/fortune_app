@@ -1,0 +1,1 @@
+"You have visited #{@number_of_visits} time(s)."

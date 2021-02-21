@@ -1,5 +1,4 @@
 class Api::MyExamplesController < ApplicationController
-
   def fortune_action
     x = rand (1..3)
     if x == 1
@@ -14,5 +13,11 @@ class Api::MyExamplesController < ApplicationController
 
   def lottery_action
     render 'lottery.json.jb'
+  end
+
+  def visit_action
+    @number_of_visits = 0
+    @number_of_visits += 1
+    render 'visit.json.jb'
   end
 end
