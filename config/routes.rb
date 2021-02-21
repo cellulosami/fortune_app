@@ -17,4 +17,9 @@ Rails.application.routes.draw do
   namespace :api do
     get "/visit_path" => "my_examples#visit_action"
   end
+
+  namespace :api do
+    get "/bottles_path" => "my_examples#bottles_action"
+  end
+  
 end

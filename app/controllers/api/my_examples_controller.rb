@@ -20,4 +20,23 @@ class Api::MyExamplesController < ApplicationController
     @number_of_visits += 1
     render 'visit.json.jb'
   end
+
+  def bottles_action
+    @message = ""
+    @bottle_quantity = 99
+    97.times do
+      @message = @message + "#{@bottle_quantity} bottles of beer on the wall, #{@bottle_quantity} bottles of beer."
+      @bottle_quantity -= 1
+      @message = @message + "
+      Take one down, pass it around, #{@bottle_quantity} bottles of beer on the wall...
+      
+      "
+    end
+    @message += "1 bottle of beer on the wall, 1 bottle of beer.
+    Teak one down, pass it around, no more bottles of beer on the wall...
+    
+    No more bottles of beer on the wall, no more bottles of beer.
+    Go to the store and buy some more, 99 bottles of beer on the wall!"
+    render json: @message
+  end
 end
