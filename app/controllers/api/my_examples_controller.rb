@@ -1,16 +1,6 @@
 class Api::MyExamplesController < ApplicationController
   def fortune_action
-    # x = rand (1..3)
-    # if x == 1
-    #   fortune = 'fortune_one.json.jb'
-    # elsif x == 2
-    #   fortune = 'fortune_two.json.jb'
-    # else
-    #   fortune = 'fortune_three.json.jb'
-    # end
-    # render fortune
-
-    fortune = ["the snakes are coming for you", "the snakes feel satiated today", "the snakes would like to play please bring your volleyball"]
+    fortune = ["the snakes are coming for you", "the snakes feel satiated today", "the snakes would like to play please bring your volleyball", "the snakes feel sad and would like you to pet them", "the snakes are missing. Where did they go?", "the snakes are dancing the Macarena", "the snakes have tasted of human blood. Give them a wide berth today", "the snakes are checking up on your progress tomorrow. Be prepared and be wary."]
 
     @sample_fortune = fortune.sample
 
